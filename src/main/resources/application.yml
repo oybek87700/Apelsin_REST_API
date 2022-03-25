@@ -1,0 +1,15 @@
+server:
+  port: 13
+  error:
+    include-message: always
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pro
+    username: postgres
+    password: oybek_8770a
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+

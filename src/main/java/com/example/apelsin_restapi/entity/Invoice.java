@@ -1,0 +1,30 @@
+package com.example.apelsin_restapi.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.Date;
+
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Table(name = "invoice")
+public class Invoice {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private boolean active = true;
+    private double ammount;
+    private Date issued;
+    private Date due;
+
+
+    @ManyToOne
+    private Order ordId;
+
+}
